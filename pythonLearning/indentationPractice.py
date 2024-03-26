@@ -36,3 +36,9 @@ a = 4
 A = "Sally"
 print(a)
 print(A)
+
+# declaration in one line
+c,d,e = "mumma" ,"babai" , "eggs"
+print(c)
+print(d)
+print(e)
