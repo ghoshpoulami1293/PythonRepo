@@ -38,7 +38,48 @@ print(a)
 print(A)
 
 # declaration in one line
-c,d,e = "mumma" ,"babai" , "eggs"
+c, d, e = "mumma","babai", "eggs"
 print(c)
 print(d)
 print(e)
+
+
+x = y = z = "Orange"
+print(x)
+print(y)
+print(z)
+
+fruits = ["apple", "banana", "cherry"]
+x, y, z = fruits
+print(x,y,z)
+print(x+y+z)
+
+
+x = 5
+y = "John"
+#print(x+y) -  Error
+print(x,y)
+z=16
+print(x+z)
+print(x, z)
+
+
+def myfunc():
+    global x
+    x = "global variable"
+
+myfunc()
+print(x)
+
+# use the global keyword if you want to change a global variable inside a function.
+# if global is not used, the value cannot be changed
+g = "Poulami"
+def myfunc2():
+    global g
+    g = "kitu"
+
+myfunc2()
+print(g)
+
+x = 5
+print(type(x))
