@@ -105,4 +105,58 @@ print(set1) #changes set 1
 
 #Both union() and update() will exclude any duplicate items.
 
-#Intersection
+#Intersection(Join set1 and set2, but keep only the duplicates)
+set1 = {"apple", "banana", "cherry"}
+set2 = {"google", "microsoft", "apple"}
+set3 = set1.intersection(set2)
+print(set3)
+
+#You can use the & operator instead of the intersection() method
+set1 = {"apple", "banana", "cherry"}
+set2 = {"google", "microsoft", "apple"}
+set3 = set1 & set2
+print(set3)
+
+#intersection update - changes the original set instead of returning a new set.
+set1 = {"apple", "banana", "cherry"}
+set2 = {"google", "microsoft", "apple"}
+set1.intersection_update(set2)
+print(set1)
+
+#The values True and 1 are considered the same value. The same goes for False and 0.
+set1 = {"apple", 1,  "banana", 0, "cherry"}
+set2 = {False, "google", 1, "apple", 2, True}
+set3 = set1.intersection(set2)
+print(set3)
+
+#Difference method
+set1 = {"apple", "banana", "cherry"}
+set2 = {"google", "microsoft", "apple"}
+set3 = set1.difference(set2) #can work with iterables other than sets
+print(set3)
+#use the - operator instead of the difference() method
+set3 = set1-set2 #only allows you to join sets with sets, and not with other data types
+print(set3)
+
+#difference_update() -  change the original set instead of returning a new set.
+set1 = {"apple", "banana", "cherry"}
+set2 = {"google", "microsoft", "apple"}
+set1.difference_update(set2)
+print(set1)
+
+#The symmetric_difference() method will keep only the elements that are NOT present in both sets.
+# You can use the ^ operator instead of the symmetric_difference() method
+set1 = {"apple", "banana", "cherry"}
+set2 = {"google", "microsoft", "apple"}
+set3 = set1.symmetric_difference(set2) #allows to joins iterables other than sets
+print(set3)
+set4 = set1^set2# allows you to only join sets
+print(set4)
+
+#The symmetric_difference_update() method will also keep all but the duplicates,
+# but it will change the original set instead of returning a new set.
+
+set1 = {"apple", "banana", "cherry"}
+set2 = {"google", "microsoft", "apple"}
+set1.symmetric_difference_update(set2) #updates existing set
+print(set1)
