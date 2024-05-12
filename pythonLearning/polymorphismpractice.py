@@ -72,3 +72,62 @@ for x in (car1, boat1, plane1):
     print(x.model)
     x.move()
 
+# Local Scope
+def myfunction():
+    x = 300
+    print(x)
+    def innerfunction():
+        print(x)
+    innerfunction()
+myfunction()
+
+#Global Scope
+
+y = 5000
+def myfunction1():
+    print(y)
+
+myfunction1()
+print(y)
+
+#Naming variables
+z = 5860
+def myfunction2():
+    z = 67
+    print(z)
+print(z)
+myfunction2()
+
+#Global keyword
+# If you need to create a global variable, but are stuck in the local scope, you can use the global keyword.
+def myfunc():
+    global a
+    a = 300
+myfunc()
+print(a)
+
+#To change the value of a global variable inside a function, refer to the variable by using the global keyword
+b = 460
+print(b)
+def myfunction5():
+    global b
+    b = 730
+myfunction5()
+print(b)
+
+# Nonlocal keyword
+# The nonlocal keyword is used to work with variables inside nested functions- makes the variable belong to the outer function
+def myfunction6():
+    x = "Jane"
+    print(x) #Jane
+    def myfunction7():
+        nonlocal x
+        x = "Hello"
+    myfunction7()
+    return x #Hello
+print(myfunction6())
+
+
+
+
+
