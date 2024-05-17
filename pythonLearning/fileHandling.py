@@ -81,4 +81,5 @@ if os.path.exists("myfile2.txt"):
 else:
     print("The file does not exist")
 
-
+#to remove the entire folder
+os.rmdir("myfolder")
